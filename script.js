@@ -1,6 +1,7 @@
 
 let init1=0;
 let init2=0;
+let count=0;
 // constsetinit1
 
 const handlerock=()=>{
@@ -9,7 +10,7 @@ const handlerock=()=>{
  document.getElementById('yp').classList.add('dn');
  document.getElementById('ys').classList.add('dn');
     let randomNumber = Math.floor(Math.random() * 3) + 0;
-    console.log(randomNumber)
+  
     if(randomNumber===1){
                 init1=parseInt(document.getElementById('bpoint').innerHTML);
         document.getElementById('bpoint').innerHTML= init1+1;
@@ -34,6 +35,7 @@ const handlerock=()=>{
  document.getElementById('br').classList.remove('dn');
  document.getElementById('bs').classList.add('dn');
     }
+    handlescore();
 }
 const handlepaper=()=>{
     // var img=document.getElementsByTagName('img');
@@ -42,7 +44,7 @@ const handlepaper=()=>{
     document.getElementById('ys').classList.add('dn');
  
     let randomNumber = Math.floor(Math.random() * 3) + 0;
-    console.log(randomNumber)
+   
     if(randomNumber===2){
                 init1=parseInt(document.getElementById('bpoint').innerHTML);
         document.getElementById('bpoint').innerHTML= init1+1;
@@ -67,6 +69,7 @@ const handlepaper=()=>{
  document.getElementById('bp').classList.remove('dn');
  document.getElementById('bs').classList.add('dn');
     }
+    handlescore();
 }
 const handlescissor=()=>{
     // var img=document.getElementsByTagName('img');
@@ -75,7 +78,7 @@ const handlescissor=()=>{
     document.getElementById('yr').classList.add('dn');
  
     let randomNumber = Math.floor(Math.random() * 3) + 0;
-    console.log(randomNumber)
+   
     if(randomNumber===0){
                 init1=parseInt(document.getElementById('bpoint').innerHTML);
         document.getElementById('bpoint').innerHTML= init1+1;
@@ -100,16 +103,31 @@ const handlescissor=()=>{
  document.getElementById('br').classList.add('dn');
  document.getElementById('bs').classList.remove('dn');
     }
-
+    handlescore();
 }
 
 const resetgame=()=>{
     document.getElementById('bpoint').innerHTML=0;
     document.getElementById('ypoint').innerHTML=0;
-    document.getElementById('yr').classList.add('reset');
-    document.getElementById('yp').classList.add('reset');
-    document.getElementById('ys').classList.add('reset');
-    document.getElementById('br').classList.add('reset');
-    document.getElementById('bs').classList.add('reset');
-    document.getElementById('bp').classList.add('reset');
+    document.getElementById('yr').classList.add('dn');
+    document.getElementById('yp').classList.add('dn');
+    document.getElementById('ys').classList.add('dn');
+    document.getElementById('br').classList.add('dn');
+    document.getElementById('bs').classList.add('dn');
+    document.getElementById('bp').classList.add('dn');
+    count=0;
+}
+const handlescore=()=>{
+   count=count+1;
+  
+   if(count===10)
+   {
+      if(parseInt(document.getElementById('ypoint').innerHTML)>parseInt(document.getElementById('bpoint').innerHTML))
+      {
+         alert("you win");
+      }
+      else
+      alert("bot win");
+      resetgame();
+   }
 }
