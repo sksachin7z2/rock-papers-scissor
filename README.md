@@ -3,7 +3,7 @@
 It is a simple javascript game in which you can play rock,paper,scissor with a bot
 
 # How to play
-1.Clone this repository in your computer.
+1.Clone this repository in your computer.<br>
 2.Run index.html
 
 # Technology Used
