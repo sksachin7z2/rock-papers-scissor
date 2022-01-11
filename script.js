@@ -102,7 +102,14 @@ const handlescissor=()=>{
     }
 
 }
+
 const resetgame=()=>{
     document.getElementById('bpoint').innerHTML=0;
     document.getElementById('ypoint').innerHTML=0;
+    document.getElementById('yr').classList.add('reset');
+    document.getElementById('yp').classList.add('reset');
+    document.getElementById('ys').classList.add('reset');
+    document.getElementById('br').classList.add('reset');
+    document.getElementById('bs').classList.add('reset');
+    document.getElementById('bp').classList.add('reset');
 }
