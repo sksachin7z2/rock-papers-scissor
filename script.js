@@ -126,8 +126,11 @@ const handlescore=()=>{
       {
          alert("you win");
       }
-      else
+      else if(parseInt(document.getElementById('ypoint').innerHTML)<parseInt(document.getElementById('bpoint').innerHTML))
       alert("bot win");
+      else{
+         alert("Draw");
+      }
       resetgame();
    }
 }
