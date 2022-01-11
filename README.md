@@ -11,6 +11,4 @@ It is a simple javascript game in which you can play rock,paper,scissor with a b
 2.CSS3<br>
 3.Bootstrap<br>
 4.Javascript
-5.animation
-
 
